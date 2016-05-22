@@ -1,0 +1,2 @@
+class LifeAccountsController < ApplicationController
+end

@@ -1,0 +1,2 @@
+class EulogiesController < ApplicationController
+end
