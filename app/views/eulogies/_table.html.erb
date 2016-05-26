@@ -1,0 +1,18 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% eulogies.each do |eulogy| %>
+      <tr>
+        <td><%= eulogy.name %></td>
+        <td>
+          <%= link_to('View', eulogy) %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

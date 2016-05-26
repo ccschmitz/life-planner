@@ -1,0 +1,20 @@
+<h2>Eulogies</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @eulogies.each do |eulogy| %>
+      <th>Name</th>
+      <th>
+        <%= link_to('Edit', edit_eulogy_path(eulogy), class: 'btn btn-sm btn-primary') %>
+      </th>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to('New Eulogy', new_eulogy_path, class: 'btn btn-primary') %>

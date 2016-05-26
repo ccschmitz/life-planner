@@ -9,6 +9,14 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render 'navigation' %>
+
+    <% if content_for?(:full_width) %>
+      <%= yield(:full_width) %>
+    <% end %>
+
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>

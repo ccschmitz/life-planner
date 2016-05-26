@@ -1,0 +1,18 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% life_accounts.each do |life_account| %>
+      <tr>
+        <td><%= life_account.name %></td>
+        <td>
+          <%= link_to('View', life_account) %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

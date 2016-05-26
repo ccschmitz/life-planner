@@ -1,0 +1,23 @@
+<h2>Eulogies</h2>
+
+<% if @user.eulogies.any? %>
+  <%= render 'eulogies/table', eulogies: @user.eulogies %>
+  <%= link_to('New Eulogy', new_eulogy_path, class: 'btn btn-primary') %>
+<% else %>
+  <div class="well">
+    No eulogies yet. Would you like to <%= link_to('create one', new_eulogy_path) %>?
+  </div>
+<% end %>
+
+<hr>
+
+<h2>Life Accounts</h2>
+
+<% if @user.life_accounts.any? %>
+  <%= render 'life_accounts/table', life_accounts: @user.life_accounts %>
+  <%= link_to('New Life Account', new_eulogy_path, class: 'btn btn-primary') %>
+<% else %>
+  <div class="well">
+    No life accounts yet. Would you like to <%= link_to('create one', new_life_account_path) %>?
+  </div>
+<% end %>
