@@ -14,13 +14,7 @@
     <% end %>
   </div>
 <% else %>
-  <div class="card">
-    <div class="card-block">
-      <div class="card-text">
-        No eulogies yet.
-      </div>
-    </div>
-  </div>
+  <p>No eulogies yet.</p>
 <% end %>
 
 <%= link_to('New Eulogy', new_eulogy_path, class: 'btn btn-primary') %>
@@ -44,13 +38,7 @@
     <% end %>
   </div>
 <% else %>
-<div class="card">
-  <div class="card-block">
-    <div class="card-text">
-      No life accounts yet.
-    </div>
-  </div>
-</div>
+  <p>No life accounts yet.</p>
 <% end %>
 
 <%= link_to('New Life Account', new_life_account_path, class: 'btn btn-primary') %>
