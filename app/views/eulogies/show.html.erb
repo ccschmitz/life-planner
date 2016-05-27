@@ -1,0 +1,8 @@
+<h1>Eulogy: <%= @eulogy.name %></h1>
+
+<hr>
+
+<%= simple_format(@eulogy.description) %>
+
+<%= link_to('Go Back', root_path, class: 'btn btn-secondary') %>
+<%= link_to('Edit', edit_eulogy_path(@eulogy), class: 'btn btn-primary') %>

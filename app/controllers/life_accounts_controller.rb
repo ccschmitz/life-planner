@@ -1,4 +1,8 @@
 class LifeAccountsController < ApplicationController
+  def show
+    @life_account = current_user.life_accounts.find(params[:id])
+  end
+
   def new
     @life_account = current_user.life_accounts.build
   end

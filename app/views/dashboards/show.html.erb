@@ -7,7 +7,7 @@
     <% @user.eulogies.each do |eulogy| %>
       <div class="card">
         <div class="card-block">
-          <h4 class="card-title"><%= eulogy.name %></h4>
+          <h4 class="card-title"><%= link_to(eulogy.name, eulogy) %></h4>
           <div class="card-text"><%= truncate(eulogy.description, length: 150) %></div>
         </div>
       </div>
@@ -25,7 +25,8 @@
 
 <%= link_to('New Eulogy', new_eulogy_path, class: 'btn btn-primary') %>
 
-<hr>
+<br>
+<br>
 
 <h2>Priorities</h2>
 
@@ -36,7 +37,7 @@
     <% @user.life_accounts.each do |life_account| %>
       <div class="card">
         <div class="card-block">
-          <h4 class="card-title"><%= life_account.name %></h4>
+          <h4 class="card-title"><%= link_to(life_account.name, life_account) %></h4>
           <div class="card-text"><%= simple_format(life_account.purpose_statement) %></div>
         </div>
       </div>

@@ -1,0 +1,31 @@
+<h1>Life Account: <%= @life_account.name %></h1>
+
+<hr>
+
+<h3>Purpose Statement</h3>
+<%= simple_format(@life_account.purpose_statement) %>
+
+<h3>Envisioned Future</h3>
+<%= simple_format(@life_account.envisioned_future) %>
+
+<h3>Current Reality</h3>
+<%= simple_format(@life_account.current_reality) %>
+
+<h3>Specific Commitments</h3>
+
+<% if @life_account.commitments.any? %>
+  <ul class="list-group">
+    <% @life_account.commitments.each do |commitment| %>
+      <li class="list-group-item">
+        <%= link_to(commitment.name, edit_life_account_commitment_path(commitment)) %>
+        <small class="text-muted"><%= commitment.due_at %></small>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No commitments in this life account yet.</p>
+<% end %>
+
+<br>
+
+<%= link_to('New Commitment', new_life_account_commitment_path(@life_account), class: 'btn btn-primary') %>
