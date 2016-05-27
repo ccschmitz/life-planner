@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160522210242) do
+ActiveRecord::Schema.define(version: 20160527020510) do
 
   create_table "commitments", force: :cascade do |t|
     t.integer  "user_id"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20160522210242) do
     t.text     "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.datetime "reviewed_at"
     t.index ["user_id"], name: "index_eulogies_on_user_id"
   end
 
@@ -39,6 +40,7 @@ ActiveRecord::Schema.define(version: 20160522210242) do
     t.text     "current_reality"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
+    t.datetime "reviewed_at"
     t.index ["user_id"], name: "index_life_accounts_on_user_id"
   end
 

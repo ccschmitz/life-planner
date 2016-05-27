@@ -14,6 +14,21 @@ class LifeAccountsController < ApplicationController
     end
   end
 
+  def edit
+    @life_account = current_user.life_accounts.find(params[:id])
+  end
+
+  def update
+    @life_account = current_user.life_accounts.find(params[:id])
+
+    if @life_account.update(life_account_params)
+      flash[:success] = 'Life account created successfully.'
+      redirect_to root_path
+    else
+      render :edit
+    end
+  end
+
   private
 
   def life_account_params
