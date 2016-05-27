@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  authenticate :user do
+  authenticated :user do
     root to: 'dashboards#show'
   end
 
