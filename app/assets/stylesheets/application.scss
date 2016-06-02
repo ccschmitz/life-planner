@@ -22,7 +22,7 @@ body > .container {
 }
 
 // Cards
-.card-text p:last-child {
+.card-text .trix-content {
   margin-bottom: 0;
 }
 
@@ -31,4 +31,9 @@ body > .container {
   trix-editor {
     border-color: $brand-danger;
   }
+}
+
+// WYSIWYG
+.trix-content {
+  margin-bottom: 1rem;
 }

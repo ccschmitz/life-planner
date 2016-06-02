@@ -4,9 +4,9 @@
 
 <%= simple_form_for(@life_account, wrapper: :horizontal_form) do |f| %>
   <%= f.input :name %>
-  <%= f.input :purpose_statement %>
-  <%= f.input :envisioned_future %>
-  <%= f.input :current_reality %>
+  <%= f.input :purpose_statement, as: :wysiwyg %>
+  <%= f.input :envisioned_future, as: :wysiwyg %>
+  <%= f.input :current_reality, as: :wysiwyg %>
   <div class="row">
     <div class="col-sm-9 col-sm-offset-3">
       <%= f.submit nil, class: 'btn btn-success' %>

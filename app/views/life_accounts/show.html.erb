@@ -3,13 +3,19 @@
 <hr>
 
 <h3>Purpose Statement</h3>
-<%= simple_format(@life_account.purpose_statement) %>
+<div class="trix-content">
+  <%= @life_account.purpose_statement.html_safe %>
+</div>
 
 <h3>Envisioned Future</h3>
-<%= simple_format(@life_account.envisioned_future) %>
+<div class="trix-content">
+  <%= @life_account.envisioned_future.html_safe %>
+</div>
 
 <h3>Current Reality</h3>
-<%= simple_format(@life_account.current_reality) %>
+<div class="trix-content">
+  <%= @life_account.current_reality.html_safe %>
+</div>
 
 <h3>Specific Commitments</h3>
 

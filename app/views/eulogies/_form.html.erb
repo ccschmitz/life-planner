@@ -4,7 +4,7 @@
 
 <%= simple_form_for(@eulogy, wrapper: :horizontal_form) do |f| %>
   <%= f.input :name %>
-  <%= f.input :description, as: :wysiwyg, input_html: { rows: 6 } %>
+  <%= f.input :description, as: :wysiwyg %>
   <div class="row">
     <div class="col-sm-9 col-sm-offset-3">
       <%= f.submit nil, class: 'btn btn-success' %>

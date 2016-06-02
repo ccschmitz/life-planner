@@ -1,8 +1,4 @@
 class EulogiesController < ApplicationController
-  def index
-    @eulogies = current_user.eulogies
-  end
-
   def show
     @eulogy = current_user.eulogies.find(params[:id])
   end

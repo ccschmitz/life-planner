@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  resources :eulogies
-  resources :life_accounts do
-    resources :commitments
+  resources :eulogies, except: :index
+  resources :life_accounts, except: :index do
+    resources :commitments, except: :index
   end
 
   devise_for :users
