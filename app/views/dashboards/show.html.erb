@@ -8,7 +8,7 @@
       <div class="card">
         <div class="card-block">
           <h4 class="card-title"><%= link_to(eulogy.name, eulogy) %></h4>
-          <div class="card-text"><%= truncate(eulogy.description, length: 150) %></div>
+          <div class="card-text"><%= eulogy.description.html_safe %></div>
         </div>
       </div>
     <% end %>
@@ -32,7 +32,7 @@
       <div class="card">
         <div class="card-block">
           <h4 class="card-title"><%= link_to(life_account.name, life_account) %></h4>
-          <div class="card-text"><%= simple_format(life_account.purpose_statement) %></div>
+          <div class="card-text"><%= life_account.purpose_statement.html_safe %></div>
         </div>
       </div>
     <% end %>

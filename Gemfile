@@ -26,6 +26,9 @@ gem 'simple_form'
 # Postgres support
 gem 'pg'
 
+# WYSIWYG editor
+gem 'trix'
+
 group :development, :test do
   gem 'pry-rails'
   gem 'rspec-rails'
