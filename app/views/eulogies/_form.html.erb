@@ -1,13 +1,11 @@
-<h1>New Eulogy</h1>
+<% content_for(:wizard) do %>
+  <div class="card-block">
+    <h2 class="card-title">New Eulogy</h2>
 
-<hr>
-
-<%= simple_form_for(@eulogy, wrapper: :horizontal_form) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :description, as: :wysiwyg %>
-  <div class="row">
-    <div class="col-sm-9 col-sm-offset-3">
-      <%= f.submit nil, class: 'btn btn-success' %>
-    </div>
+    <%= simple_form_for(@eulogy) do |f| %>
+      <%= f.input :name, placeholder: 'e.g. "Wife", "Children" or "Business Partner"' %>
+      <%= f.input :description, as: :wysiwyg, placeholder: 'Write specifics on how you want to be remembered.' %>
+      <%= f.submit nil, class: 'btn btn-success pull-xs-right' %>
+    <% end %>
   </div>
 <% end %>

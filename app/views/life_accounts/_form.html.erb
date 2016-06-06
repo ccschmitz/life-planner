@@ -1,15 +1,13 @@
-<h1>New Life Account</h1>
+<% content_for(:wizard) do %>
+  <div class="card-block">
+    <h2 class="card-title">New Life Account</h2>
 
-<hr>
-
-<%= simple_form_for(@life_account, wrapper: :horizontal_form) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :purpose_statement, as: :wysiwyg %>
-  <%= f.input :envisioned_future, as: :wysiwyg %>
-  <%= f.input :current_reality, as: :wysiwyg %>
-  <div class="row">
-    <div class="col-sm-9 col-sm-offset-3">
-      <%= f.submit nil, class: 'btn btn-success' %>
-    </div>
+    <%= simple_form_for(@life_account) do |f| %>
+      <%= f.input :name %>
+      <%= f.input :purpose_statement, as: :wysiwyg %>
+      <%= f.input :envisioned_future, as: :wysiwyg %>
+      <%= f.input :current_reality, as: :wysiwyg %>
+      <%= f.submit nil, class: 'btn btn-success pull-xs-right' %>
+    <% end %>
   </div>
 <% end %>

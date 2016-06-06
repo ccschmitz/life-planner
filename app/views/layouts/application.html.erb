@@ -17,6 +17,16 @@
 
     <div class="container">
       <%= yield %>
+
+      <% if content_for?(:wizard) %>
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <div class="card">
+              <%= yield(:wizard) %>
+            </div>
+          </div>
+        </div>
+      <% end %>
     </div>
   </body>
 </html>

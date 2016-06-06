@@ -1,0 +1,10 @@
+<% content_for(:wizard) do %>
+  <div class="card-block">
+    <h2 class="card-title">Where are you now, and where do you want to be?</h2>
+    <p class="card-text">What will people be saying about you at your funeral? What will they think as they reflect on their relationship with you and your impact on their life?</p>
+    <p class="card-text">You can shape these conversations beginning today.</p>
+    <%# TODO: Come up with some compelling copy about why it's important to start at the end. %>
+
+    <%= link_to('Get Started', new_life_account_path, class: 'btn btn-primary') %>
+  </div>
+<% end %>
